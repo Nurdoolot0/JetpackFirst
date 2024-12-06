@@ -41,20 +41,20 @@ fun ProfileScreen() {
             .background(Color.White)
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.SpaceAround
     ) {
         Text(
             text = "Profile",
             fontSize = 24.sp,
-            modifier = Modifier.padding(bottom = 32.dp),
-            color = Color.Black
+            color = Color.Black,
+            modifier = Modifier.padding(bottom = 100.dp)
         )
 
         Image(
             painter = painterResource(id = R.drawable.tobey),
             contentDescription = "Profile Picture",
-            modifier = Modifier
-                .size(120.dp)
+            modifier = Modifier.padding(bottom = 30.dp)
+                .size(170.dp)
                 .background(Color.Gray, CircleShape)
                 .clip(CircleShape),
             contentScale = ContentScale.Crop
@@ -63,26 +63,27 @@ fun ProfileScreen() {
         Text(
             text = "Имя Пользователя",
             fontSize = 20.sp,
-            modifier = Modifier.padding(top = 16.dp)
+            modifier = Modifier.padding(bottom = 0.dp)
         )
 
         Text(
             text = "Описание",
             fontSize = 16.sp,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(top = 16.dp)
+            modifier = Modifier.padding(bottom = 250.dp)
                 .padding(vertical = 8.dp)
                 .fillMaxWidth()
         )
 
         Button(
             onClick = { },
-            modifier = Modifier.padding(top = 32.dp)
+            modifier = Modifier.padding(bottom = 50.dp)
         ) {
             Text("Edit Profile")
         }
     }
 }
+
 
 @Preview(showBackground = true)
 @Composable
